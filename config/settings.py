@@ -116,5 +116,8 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# 開発時のみ、全てのオリジンからのアクセスを許可
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS. Reactアプリのみ許可
+CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOWED_ORIGINS = [
+  'http://localhost:3000',
+]
